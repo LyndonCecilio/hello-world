@@ -1,0 +1,38 @@
+# -----Color Game-----
+
+# module for random choice
+import time
+from random import choice
+
+# class for logic
+class Color_Game():
+    # rolling
+    def roll_dice():
+        for i in range(3):
+            print("rolling...")
+            time.sleep(1)
+
+    # color picker
+    def color_picker():
+        global color
+        x = choice(color)
+        y = choice(color)
+        z = choice(color)
+        return (x, y, z)
+
+# Title
+print("""---------->Color Game<----------""")
+
+# init list for colors
+color = ["Red", "Blue", "Green", "White", "Pink", "Yellow"]
+
+# ask for input
+user = input("""Type 'roll' to roll the color dices: """)
+
+if user != 'roll':
+    print("Invalid command.")
+
+Color_Game.roll_dice()
+print(Color_Game.color_picker())
+
+
